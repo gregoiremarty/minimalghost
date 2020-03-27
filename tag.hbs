@@ -1,0 +1,33 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{#tag}}
+{{> header background=feature_image}} {{!--Special header.hbs partial to generate the <header> tag--}}
+    <div class="inner">
+        <div class="site-header-content">
+          <ul class="nav">
+          <li class="social"><a href="https://instagram.com/leschosesvivantes">instagram</li>
+          <li class="social"><a href="https://mastodon.social/@gregoiremarty">mastodon</li>
+          <li class="social"><a href="https://circa1984.net/rss/">rss</li>
+          </ul>
+          <h1 class="site-title">
+                  <a href="https://circa1984.net">{{@site.title}}</a>
+          </h1>
+          <h1 class="post-full-title">{{name}}</h1>
+
+        </div>
+    </div>
+</header>
+{{/tag}}
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+        <div class="post-feed">
+            {{#foreach posts}}
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+            {{/foreach}}
+        </div>
+    </div>
+</main>
