@@ -307,7 +307,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: justify;
+    text-align: left;
 }
 
 .post-card-meta {
@@ -524,7 +524,7 @@ make sure this only happens on large viewports / desktop-ish devices.
   font-family: inherit;
   font-size: 1.8rem;
   line-height: 1.65em;
-  text-align: justify;
+  text-align: left;
 }
 
 @media (max-width: 800px) {
